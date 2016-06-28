@@ -1,0 +1,22 @@
+<ion-menu [content]="conteudo" class="menu-container">
+
+  <ion-content>
+    <ion-card class="menu-container-imagem">
+      <img src="img/logo.png"/>
+      <ion-card-content class="menu-container-imagem-txt">
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list class="menu-container-links">
+      <!-- <button ion-item (click)="openPage(home)" menuClose>Home</button> -->
+      <button ion-item (click)="openPage(protocolos)" menuClose><ion-icon name="document"></ion-icon> Protocolos</button>
+      <button ion-item (click)="openPage(empresas)" menuClose><ion-icon name="home"></ion-icon> Empresas</button>
+      <button ion-item (click)="openPage(busca)" menuClose><ion-icon name="search"></ion-icon> Busca</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #conteudo class="container-content"></ion-nav>

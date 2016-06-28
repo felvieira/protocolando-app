@@ -1,0 +1,42 @@
+<!--
+  Generated template for the ModalEmpresasPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-navbar *navbar>
+  <ion-buttons start>
+    <button (click)="cancel()"><ion-icon name="close"></ion-icon></button>
+  </ion-buttons>
+
+  <ion-title>Editar Empresa</ion-title>
+</ion-navbar> -->
+<ion-toolbar>
+  <ion-buttons start>
+    <button royal>
+    </button>
+  </ion-buttons>
+  <ion-title text-center>Empresas - Detalhe</ion-title>
+  <ion-buttons end>
+    <button royal (click)="cancel()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content padding class="modal-empresas">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Logo da Empresa</ion-label>
+      <ion-input type="text" [(ngModel)]="empresas.imagem"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Nome da Empresa</ion-label>
+      <ion-input type="text" [(ngModel)]="empresas.descricao"></ion-input>
+    </ion-item>
+
+</ion-list>
+<button block (click)="salvar()">Salvar</button>
+<button block light (click)="cancel()">Cancelar</button>
+
+</ion-content>

@@ -1,0 +1,110 @@
+<!--
+Generated template for the ModalProtocolosPage page.
+
+See http://ionicframework.com/docs/v2/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+
+<!-- <ion-navbar *navbar>
+<ion-buttons start>
+<button (click)="cancel()"><ion-icon name="close"></ion-icon></button>
+</ion-buttons>
+<ion-title>Editar Protocolo</ion-title>
+</ion-navbar> -->
+<!--
+<ion-header-bar class="navbar">
+<ion-buttons start>
+
+</ion-buttons>
+<ion-title text-center>Protocolo - Detalhe</ion-title>
+<ion-buttons end>
+<button (click)="cancel()"><ion-icon name="close"></ion-icon></button>
+</ion-buttons>
+</ion-header-bar> -->
+
+
+<ion-toolbar>
+  <ion-buttons start>
+    <button royal>
+    </button>
+  </ion-buttons>
+  <ion-title text-center>Protocolo - Detalhe</ion-title>
+  <ion-buttons end>
+    <button royal (click)="cancel()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+
+<ion-content class="modal-protocolos">
+
+<button (click)="takepic()">Click</button>
+  <ion-card>
+      <img [src]="image">
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Nome da Empresa</ion-label>
+      <ion-select [(ngModel)]="protocolos.empresa">
+        <ion-option *ngFor="let item of empresas" value="{{item.descricao}}">
+          {{item.descricao}}
+        </ion-option>
+      </ion-select>
+      <!-- <ion-select>
+      <ion-option value="nes">NES</ion-option>
+      <ion-option value="n64">Nintendo64</ion-option>
+      <ion-option value="ps">PlayStation</ion-option>
+      <ion-option value="genesis">Sega Genesis</ion-option>
+      <ion-option value="saturn">Sega Saturn</ion-option>
+      <ion-option value="snes">SNES</ion-option>
+    </ion-select> -->
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Logo da Empresa</ion-label>
+    <ion-input type="text" [(ngModel)]="protocolos.imagem"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label >Data</ion-label>
+    <!-- <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="protocolos.data" ></ion-datetime> -->
+      <ion-input type="date" [(ngModel)]="protocolos.data"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Numero do Protocolo</ion-label>
+    <ion-input type="text" [(ngModel)]="protocolos.numero"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tempo de Conversa<h6>(horas)</h6></ion-label>
+    <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="protocolos.tempoConversa"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tempo de Espera<h6>(horas)</h6></ion-label>
+    <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="protocolos.tempoEspera"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Resumo da Reclamação</ion-label>
+    <ion-textarea [(ngModel)]="protocolos.descricao"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Status do Protocolo</ion-label>
+    <ion-select [(ngModel)]="protocolos.escolhaResolucao">
+      <ion-option value="resolvido">Resolvido</ion-option>
+      <ion-option value="naoresolvido">Não Resolvido</ion-option>
+      <ion-option value="caiuligacao">Caiu a ligação</ion-option>
+      <ion-option value="aguardando">Em aberto</ion-option>
+    </ion-select>
+  </ion-item>
+
+</ion-list>
+<button block (click)="salvar()">Salvar</button>
+<button block light (click)="cancel()">Cancelar</button>
+
+</ion-content>
